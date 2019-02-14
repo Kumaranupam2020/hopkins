@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: normal 14px/1.2 Tahoma, Arial, sans-serif;
+    min-width: 480px; /* just to prevent full squeeze */
+}
+
+h1 {
+    font: bold 1.75em/1 Verdana, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* in case we were to support IE8, we could replace
+main, section and artice tags with ordinary divs with
+corresponding classes and use class selectors here
+(e.g. <div class="main"> in html and .main {...} here),
+or use some JS code to explicitly create elements */
+
+main {
+    display: block; /* for IE11 and lower */
+    margin: 75px 12px 0;
+}
+
+section {
+    float: left;
+    margin: 0 0 25px 0;
+}
+
+article {
+    position: relative;
+    margin: 0 12px;
+    height: 150px;
+    border: 1px solid #000;
+    background-color: #999;
+}
+
+article > p {
+    margin-top: 2em;
+    padding: 12px;
+}
+
+article > h1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px; /* we suppose they all are equal despite the mockup */   
+    margin: 0;
+    border: 1px solid #000;
+    border-top: none;
+    border-right: none;
+    font-size: 1.25em;
+    line-height: 1.75;
+    text-align: center;
+}
+
+/* if we were to make each title of individual width like it's shown
+in the mockup, then we just add desired widths to the rules below */
+.chicken h1 {  background-color: #D59898;  }
+.beef h1    {  background-color: #C14543;  color: #fff;}
+.sushi h1   {  background-color: #E5D198;  }
+
+
+/* Desktop */
+@media screen and (min-width:992px) {
+    section {
+        width: 33.33%;
+    }
+}
+
+/* Tablet */
+/* we mean 991 but say 991.98 to mitigate fracional pixel width */
+@media screen and (min-width: 768px) and (max-width:991.98px) {
+    section {
+        width: 50%;
+    }
+
+    /*in case we were to support IE8, then we had to manually add
+    some class to the last element or use JS/jQuery to put the style*/
+    section:last-child {
+        width: 100%;
+        clear:left;
+    }
+}
+
+/* Mobile */
+/* we mean 767 but say 767.98 to mitigate fracional pixel width */
+@media screen and (max-width:767.98px) {
+    section {
+        /* float: none; */
+        display: block;
+    }
+
+    /* we have put all blocks straight in center although
+    they are slightly moved to the right in the mockup.
+    In case we really need that, we just add this css-rule:  
+    main {
+        margin-left: 25px;
+    }
+    */
+}
