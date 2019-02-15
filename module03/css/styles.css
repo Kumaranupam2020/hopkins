@@ -1,19 +1,24 @@
 .navbar { 
-    height: 75px;
+    min-height: 75px;
     padding: 0;
     border: none;
     border-radius:0;
+}
+.navbar > .container-fluid {
+    margin: 0;
+    padding: 0;
     background-color: #00538A;
     background: linear-gradient(45deg, #00538A 0%, #05C1FF 50%, #00538A 100%);
 }
-
 .container-fluid > .navbar-header {
-    margin: 0px 50px;
+    margin: 0px;
+    padding: 0 50px;
+    
 }
 
 .navbar-brand {
     height: 75px;
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
     font: bold 30px/75px Georgia, Times, serif;
     color: #fff;
@@ -45,14 +50,14 @@
     transform: rotate(270deg);
 }
 
-.container-fluid > .navbar-collapse {
+.container-fluid > .navbar-collapse.collapsing,
+.container-fluid > .navbar-collapse.in
+ {
     margin: 0;
     box-shadow: 0 10px 20px -5px #777;
 }
 .navbar-collapse {
     border: none;
-    background-color: #00538A;
-    background: linear-gradient(-63deg, #00538A 0%, #05C1FF 50%, #00538A 100%);
     text-align: center;
 }
 
