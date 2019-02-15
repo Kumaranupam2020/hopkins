@@ -1,3 +1,17 @@
+body {
+    min-width: 480px;
+}
+h1 {
+    font: bold 30px/75px Georgia, Times, serif;
+}
+article.menu {
+    padding: 75px;
+    margin-bottom: 75px;
+    background-color: rgba(248, 243, 238, 1);
+    box-shadow: 0 0 25px rgba(170, 170, 170, 0.5);
+    border: 1px solid #eee;
+}
+
 .navbar { 
     min-height: 75px;
     padding: 0;
